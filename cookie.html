@@ -7,7 +7,7 @@
         width:'100%';
         height:'100%';
         overflow: hidden;
-        background-image: url('./Assets/space.png');
+        background-image: url('space.png');
     } 
     .cookieboi {
         position: absolute;
@@ -23,24 +23,22 @@
         to {transform: rotate(359deg);}
     }
 </style>
-        <input type="image" class="cookieboi" id="cookieboi" src="./Assets/cookieDrawing.png" > 
+            <input type="image" class="cookieboi" id="cookieboi" src="cookieDrawing.png" > 
     </body>
     <script>
-        //import cookieArray from './cookieArray.js';
-        //const cookies = cookieArray.cookieArray;
-        let i = 0;
+        var i = 0;
         document.getElementById("cookieboi").addEventListener("click", function(){
+            
              i++;
-             document.getElementById("cookieboi").src = "./Assets/cookieBite" + i + ".png";
-             //document.getElementById("cookieboi").src = cookies[i];
+             document.getElementById("cookieboi").src = "cookieBite" + i +".png";
              if(i === 8){
                 document.getElementById("cookieboi").disabled = true;
-                 i = 0;
+                 i = 0
                  setTimeout(() => {
-                     document.getElementById("cookieboi").src ="./Assets/cookieDrawing.png";
+                     document.getElementById("cookieboi").src ="cookieDrawing.png";
                      document.getElementById("cookieboi").disabled = false;
                 }, 1500);
              }
         });
-    </script>
+        </script>
 </html>
