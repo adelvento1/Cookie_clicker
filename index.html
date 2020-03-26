@@ -1,0 +1,46 @@
+<!DOCTYPE html/>
+<html>
+    <title>Cookies In SPACE</title>
+    <body>
+<style> 
+    body{
+        width:'100%';
+        height:'100%';
+        overflow: hidden;
+        background-image: url('./Assets/space.png');
+    } 
+    .cookieboi {
+        position: absolute;
+        top: calc(100% - 80%);
+        left: calc(100% - 70%); 
+        width: 35%;
+        height: auto;
+        outline: none;
+        animation: rotation 12s infinite linear; 
+    }
+     @keyframes rotation {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(359deg);}
+    }
+</style>
+        <input type="image" class="cookieboi" id="cookieboi" src="./Assets/cookieDrawing.png" > 
+    </body>
+    <script>
+        //import cookieArray from './cookieArray.js';
+        //const cookies = cookieArray.cookieArray;
+        let i = 0;
+        document.getElementById("cookieboi").addEventListener("click", function(){
+             i++;
+             document.getElementById("cookieboi").src = "./Assets/cookieBite" + i + ".png";
+             //document.getElementById("cookieboi").src = cookies[i];
+             if(i === 8){
+                document.getElementById("cookieboi").disabled = true;
+                 i = 0;
+                 setTimeout(() => {
+                     document.getElementById("cookieboi").src ="./Assets/cookieDrawing.png";
+                     document.getElementById("cookieboi").disabled = false;
+                }, 1500);
+             }
+        });
+    </script>
+</html>
