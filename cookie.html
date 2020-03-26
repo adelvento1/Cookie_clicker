@@ -23,19 +23,18 @@
         to {transform: rotate(359deg);}
     }
 </style>
-            <input type="image" class="cookieboi" id="cookieboi" src="cookieDrawing.png" > 
+            <input type="image" class="cookieboi" id="cookieboi" src="./assets/cookieDrawing.png" > 
     </body>
     <script>
         var i = 0;
         document.getElementById("cookieboi").addEventListener("click", function(){
-            
              i++;
-             document.getElementById("cookieboi").src = "cookieBite" + i +".png";
+             document.getElementById("cookieboi").src = "./assets/cookieBite" + i +".png";
              if(i === 8){
                 document.getElementById("cookieboi").disabled = true;
                  i = 0
                  setTimeout(() => {
-                     document.getElementById("cookieboi").src ="cookieDrawing.png";
+                     document.getElementById("cookieboi").src ="./assets/cookieDrawing.png";
                      document.getElementById("cookieboi").disabled = false;
                 }, 1500);
              }
